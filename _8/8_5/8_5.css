@@ -1,0 +1,22 @@
+.link{
+  text-decoration: none;
+}
+
+.link::after {
+  content: attr(href);
+  position: absolute;
+  padding: 5px; 
+  top: 30px; /* поставить -30 для расположения сверху */
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.link:hover {
+  text-decoration: underline; 
+}
+
+.link:hover::after {
+  visibility: visible; 
+  opacity: 1; 
+}
